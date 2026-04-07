@@ -2,9 +2,13 @@
   "name": "simple-play-stop",
   "private": true,
   "version": "1.0.0",
+  "type": "module",
   "description": "Simple login + play/stop toggle with persistent status endpoint (Vercel).",
   "dependencies": {
     "@vercel/kv": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }
 
