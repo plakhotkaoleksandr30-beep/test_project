@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Login + Play/Stop</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="card" id="loginView" aria-labelledby="loginTitle">
+        <header class="cardHeader">
+          <h1 id="loginTitle">Login</h1>
+          <p class="muted">Use the provided username and password.</p>
+        </header>
+
+        <form id="loginForm" class="form" autocomplete="off">
+          <label class="field">
+            <span class="label">Username</span>
+            <input id="username" name="username" type="text" inputmode="text" required />
+          </label>
+
+          <label class="field">
+            <span class="label">Password</span>
+            <input id="password" name="password" type="password" required />
+          </label>
+
+          <div class="row">
+            <button class="btn primary" type="submit">Sign in</button>
+            <button class="btn" type="button" id="fillDemo">Fill demo</button>
+          </div>
+
+          <p class="error" id="loginError" role="alert" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="card hidden" id="appView" aria-labelledby="appTitle">
+        <header class="cardHeader">
+          <h1 id="appTitle">App</h1>
+          <p class="muted">Press Play to switch to Stop (and back).</p>
+        </header>
+
+        <div class="row">
+          <button class="btn primary" id="runBtn" type="button">Play</button>
+          <button class="btn" id="logoutBtn" type="button">Logout</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
